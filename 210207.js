@@ -22,3 +22,30 @@ const numIdenticalPairs = (nums) => {
   }
   return pairCount;
 };
+
+// How Many Numbers Are Smaller Than the Current Number
+
+// Given the array nums, for each nums[i] find out how many numbers in the array are smaller than it.
+// That is, for each nums[i] you have to count the number of valid j's such that j != i and nums[j] < nums[i].
+// Return the answer in an array.
+
+// Example:
+// Input: nums = [6,5,4,8]
+// Output: [2,1,0,3]
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var smallerNumbersThanCurrent = function (nums) {
+  const output = nums.map((num, idx) => {
+    let count = 0;
+    for (let i = 0; i < nums.length; i++) {
+      if (idx !== i && num > nums[i]) {
+        count += 1;
+      }
+    }
+    return count;
+  });
+  return output;
+};
