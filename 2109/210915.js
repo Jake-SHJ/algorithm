@@ -15,6 +15,8 @@
 // The result of this move is that the string is "aaca",
 // of which only "aa" is possible, so the final string is "ca".
 
+// 주어진 문자열에서 인접한 문자가 같은 문자일 경우 해당 문자들을 제외한 나머지 문자를 반환하는 문제
+
 /**
  * @param {string} s
  * @return {string}
@@ -32,3 +34,4 @@ var removeDuplicates = function (s) {
 
   return result.join("");
 };
+// 문제를 잘 이해하고 풀것. (인접한 문자열)
