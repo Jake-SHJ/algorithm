@@ -46,3 +46,4 @@ var checkZeroOnes = function (s) {
 
   return longestOne > longestZero;
 };
+// 분기 처리가 좀 까다로웠음. 특히, 마지막 요소인 경우
